@@ -59,7 +59,7 @@ class CategoryController extends Controller
         //
         $category = Category::findOrFail($id);
         $category->update($request->only('name'));
-        return response()->json($category); 
+        return response()->json($category);
     }
 
     /**

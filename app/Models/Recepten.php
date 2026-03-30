@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Recepten extends Model
 {
-    protected $table = 'recipes';     
+    protected $table = 'recipes';
 
     protected $fillable = [
         'title',
@@ -21,9 +21,9 @@ class Recepten extends Model
     {
         return $this->belongsToMany(
             Ingredient::class,
-            'recipe_ingredient',  
-            'recipe_id',          
-            'ingredient_id'       
+            'recipe_ingredient',
+            'recipe_id',
+            'ingredient_id'
         )->withPivot('amount', 'unit')->withTimestamps();
     }
 
@@ -31,9 +31,9 @@ class Recepten extends Model
     {
         return $this->belongsToMany(
             Category::class,
-            'recipe_category',  
-            'recipe_id',        
-            'category_id'       
+            'recipe_category',
+            'recipe_id',
+            'category_id'
         );
     }
 

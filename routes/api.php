@@ -11,6 +11,7 @@ Route::get('/user', function (Request $request) {
 
 Route::get('recepten/titel/{titel}', [ReceptController::class, 'findByTitle']);
 Route::get('recepten/ingredient/{naam}', [ReceptController::class, 'findByIngredient']); 
+
 route::apiResource('recepten', ReceptController::class);
 Route::apiResource('category', CategoryController::class)
 ->parameters(['category' => 'category']);
