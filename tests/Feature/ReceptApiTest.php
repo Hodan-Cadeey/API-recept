@@ -14,11 +14,9 @@ class ReceptApiTest extends TestCase
 
     public function test_database_connection_works()
     {
-        // Probeer iets op te halen uit de database
-
+        
         $count = DB::table('recipes')->count();
 
-        // Als dit werkt, is de connectie goed
         $this->assertIsInt($count);
     }
 

@@ -147,7 +147,8 @@ class ReceptController extends Controller
             }
         }
     }
-
+    //zorgt ervoor dat categorieën gekoppeld worden aan een recept.
+    
     private function syncCategories(Recepten $recept, Request $request)
     {
         if ($request->filled('categories') && is_array($request->categories)) {
